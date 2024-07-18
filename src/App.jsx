@@ -8,7 +8,7 @@ import About from './pages/About';
 function App() {
   return (
     <Router>
-      <Header />
+      <Header/>
       <Home/>
       <About/>
       
