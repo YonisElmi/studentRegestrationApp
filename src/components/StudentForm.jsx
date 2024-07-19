@@ -3,6 +3,7 @@ import React, { useState} from 'react';
 
 const StudentForm = () => {
   
+  const { addStudent } = useContext(StudentContext);
   const [name, setName] = useState('');
   const [studentClass, setStudentClass] = useState('');
   const [phone, setPhone] = useState('');
