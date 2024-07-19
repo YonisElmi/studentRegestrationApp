@@ -9,6 +9,14 @@ const StudentForm = () => {
   const [email, setEmail] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
 
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    setName('');
+    setStudentClass('');
+    setPhone('');
+    setEmail('');
+    setDateOfBirth('');
+  };
 
 
   return (
