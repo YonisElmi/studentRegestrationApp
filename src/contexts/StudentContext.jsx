@@ -10,6 +10,9 @@ const StudentProvider = ({ children }) => {
   
   };
 
+  const updateStudent = (updatedStudent) => {
+        setStudents(students.map(student => student.id === updatedStudent.id ? updatedStudent : student));
+      };
 
 
 
