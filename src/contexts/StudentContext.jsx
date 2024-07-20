@@ -14,6 +14,10 @@ const StudentProvider = ({ children }) => {
         setStudents(students.map(student => student.id === updatedStudent.id ? updatedStudent : student));
       };
 
+      const deleteStudent = (id) => {
+            setStudents(students.filter(student => student.id !== id));
+          };
+
 
 
  return(
