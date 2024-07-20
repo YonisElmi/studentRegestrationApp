@@ -22,12 +22,10 @@ const StudentProvider = ({ children }) => {
 
 
   const updateStudent = (updatedStudent) => {
-        setStudents(students.map(student => student.id === updatedStudent.id ? updatedStudent : student));
-      };
+    setStudents(students.map(student => student.id === updatedStudent.id ? updatedStudent : student));
+  };
 
-      const deleteStudent = (id) => {
-            setStudents(students.filter(student => student.id !== id));
-          };
+     
 
 
 
