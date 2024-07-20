@@ -12,10 +12,10 @@ const StudentProvider = ({ children }) => {
     }
   }, []);
 
-  const addStudent = (student) => {
-    setStudents([...students, student]);
-  
-  };
+  useEffect(() => {
+    localStorage.setItem('students', JSON.stringify(students));
+  }, [students]);
+
 
   const updateStudent = (updatedStudent) => {
         setStudents(students.map(student => student.id === updatedStudent.id ? updatedStudent : student));
@@ -26,6 +26,7 @@ const StudentProvider = ({ children }) => {
           };
 
 
+          
 
  return(
    <StudentContext.Provider value={{ students}}>
