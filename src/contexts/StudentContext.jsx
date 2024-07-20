@@ -28,7 +28,9 @@ const StudentProvider = ({ children }) => {
      
 
 
-
+  const deleteStudent = (id) => {
+    setStudents(students.filter(student => student.id !== id));
+  };
 
  return(
    <StudentContext.Provider value={{ students}}>
