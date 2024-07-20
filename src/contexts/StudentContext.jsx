@@ -1,9 +1,16 @@
-import React from 'react';
-import React, { createContext } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 const StudentContext = createContext();
+
 const StudentProvider = ({ children }) => {
   const [students, setStudents] = useState([]);
+
+  useEffect(() => {
+    const storedStudents = JSON.parse(localStorage.getItem('students'));
+    if (storedStudents) {
+      setStudents(storedStudents);
+    }
+  }, []);
 
   const addStudent = (student) => {
     setStudents([...students, student]);
