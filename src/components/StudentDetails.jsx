@@ -1,67 +1,85 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { StudentContext } from '../contexts/StudentContext';
 
-const Header = () => {
+const StudentDetails = ({ student }) => {
+  const { updateStudent, deleteStudent } = useContext(StudentContext);
+  const [isEditing, setIsEditing] = useState(false);
+  const [name, setName] = useState(student.name);
+  const [studentClass, setStudentClass] = useState(student.studentClass);
+  const [phone, setPhone] = useState(student.phone);
+  const [email, setEmail] = useState(student.email);
+  const [dateOfBirth, setDateOfBirth] = useState(student.dateOfBirth);
+
+  const handleUpdate = () => {
+    updateStudent({ ...student, name, studentClass, phone, email, dateOfBirth });
+    setIsEditing(false);
+  };
+
   return (
-   
-
-    <header>
-        <div className="bg-gray-100 border-b border-gray-200">
-            <div className="px-4 mx-auto sm:px-6 lg:px-8">
-                <nav className="relative flex items-center justify-between h-16 lg:h-20">
-                    <div className="hidden lg:flex lg:items-center lg:space-x-10">
-                        <Link to="/" className="text-base font-medium text-black">Home</Link>
-                        <Link to="/register" className="text-base font-medium text-black">Register</Link>
-                        <Link to="/view-students" className="text-base font-medium text-black">View Students</Link>
-                        <Link to="/about" className="text-base font-medium text-black">About</Link>
-                    </div>
-                    <div className="lg:absolute lg:-translate-x-1/2 lg:inset-y-5 lg:left-1/2">
-                        <div className="flex-shrink-0">
-                            <Link to="#" className="flex">
-                                <img className="w-auto h-8 lg:h-10" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" />
-                            </Link>
-                        </div>
-                    </div>
-                 
-                    <button type="button" className="inline-flex p-2 ml-5 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
-                        <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                 
-                </nav>
-            </div>
-        </div>
-        <nav className="py-4 bg-white lg:hidden">
-            <div className="px-4 mx-auto sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between">
-                    <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">Menu</p>
-                    <button type="button" className="inline-flex p-2 text-black transition-all duration-200 rounded-md focus:bg-gray-100 hover:bg-gray-100">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <div className="mt-6">
-                    <div className="flex flex-col space-y-2">
-                        <Link to="/" className="py-2 text-base font-medium text-black transition-all duration-200 focus:text-blue-600">Home</Link>
-                        <Link to="/register" className="py-2 text-base font-medium text-black transition-all duration-200 focus:text-blue-600">Register</Link>
-                        <Link to="/view-students" className="py-2 text-base font-medium text-black transition-all duration-200 focus:text-blue-600">View Students</Link>
-                        <Link to="/about" className="py-2 text-base font-medium text-black transition-all duration-200 focus:text-blue-600">About</Link>
-                    </div>
-                    <hr className="my-4 border-gray-200" />
-                    
-                </div>
-            </div>
-        </nav>
-    </header>
-    
+    <tr>
+      {isEditing ? (
+        <>
+          <td className="border px-4 py-2">
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full px-2 py-1 border rounded"
+            />
+          </td>
+          <td className="border px-4 py-2">
+            <input
+              type="text"
+              value={studentClass}
+              onChange={(e) => setStudentClass(e.target.value)}
+              className="w-full px-2 py-1 border rounded"
+            />
+          </td>
+          <td className="border px-4 py-2">
+            <input
+              type="text"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="w-full px-2 py-1 border rounded"
+            />
+          </td>
+          <td className="border px-4 py-2">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-2 py-1 border rounded"
+            />
+          </td>
+          <td className="border px-4 py-2">
+            <input
+              type="date"
+              value={dateOfBirth}
+              onChange={(e) => setDateOfBirth(e.target.value)}
+              className="w-full px-2 py-1 border rounded"
+            />
+          </td>
+          <td className="border px-4 py-2 flex space-x-2">
+            <button onClick={handleUpdate} className="bg-green-500 text-white px-2 py-1 rounded">Save</button>
+            <button onClick={() => setIsEditing(false)} className="bg-gray-500 text-white px-2 py-1 rounded">Cancel</button>
+          </td>
+        </>
+      ) : (
+        <>
+          <td className="border px-4 py-2">{student.name}</td>
+          <td className="border px-4 py-2">{student.studentClass}</td>
+          <td className="border px-4 py-2">{student.dateOfBirth ? new Date(student.dateOfBirth).toLocaleDateString() : 'N/A'}</td>
+          <td className="border px-4 py-2">{student.phone}</td>
+          <td className="border px-4 py-2">{student.email}</td>
+          
+          <td className="border px-4 py-2 flex space-x-2">
+            <button onClick={() => setIsEditing(true)} className="bg-yellow-500 text-white px-2 py-1 rounded">Edit</button>
+            <button onClick={() => deleteStudent(student.id)} className="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+          </td>
+        </>
+      )}
+    </tr>
   );
 };
 
-export default Header;
-
-
-
-
-
+export default StudentDetails;
