@@ -2,37 +2,35 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section class="py-10 bg-white sm:py-16 lg:py-24">
-    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="grid items-center grid-cols-1 lg:grid-cols-2 gap-x-12 xl:gap-x-24 gap-y-12">
-            <div class="relative lg:mb-12">
-                <img class="absolute -right-0 -bottom-8 xl:-bottom-12 xl:-right-4" src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/dots-pattern.svg" alt="" />
-                <div class="pl-12 pr-6">
-                    <img class="relative" src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/girl-working-on-laptop.jpg" alt="" />
-                </div>
-                <div class="absolute left-0 pr-12 bottom-8 xl:bottom-20">
-                    <div class="max-w-xs bg-blue-600 rounded-lg sm:max-w-md xl:max-w-md">
-                        <div class="px-3 py-4 sm:px-5 sm:py-8">
-                            <div class="flex items-start">
-                                <p class="text-3xl sm:text-4xl">👋</p>
-                                <blockquote class="ml-5">
-                                    <p class="text-sm font-medium text-white sm:text-lg">“You made it so simple. My new site is so much faster and easier to study something with than other sites around world.”</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="2xl:pl-16">
-                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">We make learning easy  with based on real life projects.</h2>
-                <p class="text-xl leading-relaxed text-gray-900 mt-9">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim velit mollit. Exercitation veniam.</p>
-                <p class="mt-6 text-xl leading-relaxed text-gray-900">Velit officia conse duis enim velit mollit. Exercit ation veniam consequat sunt nostrud amet.</p>
-            </div>
+    <section className="pt-10 overflow-hidden bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16">
+      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div className="grid items-center grid-cols-1 md:grid-cols-2 gap-20">
+          <div className="relative order-2 md:order-1">
+            <img
+              className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110 transform translate-y-10"
+              src="assets/Register.png"
+              alt="Student Registration"
+            />
+          </div>
+          <div className="order-1 md:order-2">
+            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+              Welcome to Student Registration
+            </h2>
+            <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">
+              Our platform provides an easy and efficient way to manage student registrations and information.
+            </p>
+            <p className="mt-4 text-xl text-gray-600 md:mt-8">
+              <span className="relative inline-block">
+                <span className="absolute inline-block w-full bottom-0.5 h-2 "></span>
+                <span className="relative"> Have a question? </span>
+              </span>
+              <br className="block sm:hidden" />
+              Ask us on <a href="#" title="" className="transition-all duration-200 text-sky-500 hover:text-sky-600 hover:underline">Twitter</a>
+            </p>
+          </div>
         </div>
-    </div>
-</section>
-
+      </div>
+    </section>
   );
 };
 
