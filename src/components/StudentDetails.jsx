@@ -61,7 +61,6 @@ const StudentDetails = ({ student }) => {
           </td>
           <td className="border px-4 py-2 flex space-x-2">
             <button onClick={handleUpdate} className="bg-green-500 text-white px-2 py-1 rounded">Save</button>
-            <button onClick={() => setIsEditing(false)} className="bg-gray-500 text-white px-2 py-1 rounded">Cancel</button>
           </td>
         </>
       ) : (
