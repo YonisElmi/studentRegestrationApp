@@ -1,4 +1,5 @@
 import React from 'react';
+import img from '../images/about.jpeg'
 
 const About = () => {
   return (
@@ -8,7 +9,7 @@ const About = () => {
           <div className="relative order-2 md:order-1">
             <img
               className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110 transform translate-y-10"
-              src="../assets/Register.png"
+              src={img}
               alt="Student Registration"
             />
           </div>
