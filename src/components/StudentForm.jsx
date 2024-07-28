@@ -1,8 +1,7 @@
-import React, { useState , useContext} from 'react';
-
+import React, { useState, useContext } from 'react';
+import { StudentContext } from '../contexts/StudentContext';
 
 const StudentForm = () => {
-  
   const { addStudent } = useContext(StudentContext);
   const [name, setName] = useState('');
   const [studentClass, setStudentClass] = useState('');
@@ -10,8 +9,9 @@ const StudentForm = () => {
   const [email, setEmail] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
 
-    const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    addStudent({ id: Date.now(), name, studentClass, phone, email, dateOfBirth });
     setName('');
     setStudentClass('');
     setPhone('');
@@ -19,8 +19,8 @@ const StudentForm = () => {
     setDateOfBirth('');
   };
 
-
   return (
+    
     <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white shadow-md rounded">
       <div className="mb-4">
         <label className="block text-gray-700">Name</label>
