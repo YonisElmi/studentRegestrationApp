@@ -1,15 +1,15 @@
 import React from 'react';
-import img from '../images/about.jpeg'
+import about from '../images/Register.png'
 
 const About = () => {
   return (
-    <section className="pt-10 overflow-hidden bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16">
+    <section className="pt-10 overflow-hidden bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16 mt-8">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid items-center grid-cols-1 md:grid-cols-2 gap-20">
           <div className="relative order-2 md:order-1">
             <img
               className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110 transform translate-y-10"
-              src={img}
+              src={about}
               alt="Student Registration"
             />
           </div>
