@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Register2 from '../images/Register2.png'
+import user1 from '../images/user1.jpeg'
+import user2 from '../images/user2.jpeg'
+import user3 from '../images/user3.jpeg'
 
 const Home = () => {
   return (
@@ -35,7 +39,7 @@ const Home = () => {
             <div className="flex justify-center h-full">
               <img
                 className="w-full h-full object-cover"
-                src="assets/Register2.png"
+                src={Register2}
                 alt="Student Registration"
               />
             </div>
@@ -137,7 +141,7 @@ const Home = () => {
           <div className="mt-12 grid gap-8 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2">
             <div className="p-8 bg-gray-100 rounded-lg shadow">
               <div className="flex items-center">
-                <img className="w-12 h-12 rounded-full" src="/assets/user1.jpeg" alt="User 1" />
+                <img className="w-12 h-12 rounded-full" src={user1} alt="User 1" />
                 <div className="ml-4">
                   <h3 className="text-lg font-bold text-gray-900">John Doe</h3>
                   <p className="text-gray-600">Software Engineer</p>
@@ -150,7 +154,7 @@ const Home = () => {
 
             <div className="p-8 bg-gray-100 rounded-lg shadow">
               <div className="flex items-center">
-                <img className="w-12 h-12 rounded-full" src="/assets/user2.jpeg" alt="User 2" />
+                <img className="w-12 h-12 rounded-full" src={user2}  alt="User 2" />
                 <div className="ml-4">
                   <h3 className="text-lg font-bold text-gray-900">Jane Smith</h3>
                   <p className="text-gray-600">Administrator</p>
@@ -163,7 +167,7 @@ const Home = () => {
 
             <div className="p-8 bg-gray-100 rounded-lg shadow">
               <div className="flex items-center">
-                <img className="w-12 h-12 rounded-full" src="/assets/user3.jpeg" alt="User 3" />
+                <img className="w-12 h-12 rounded-full" src={user3} alt="User 3" />
                 <div className="ml-4">
                   <h3 className="text-lg font-bold text-gray-900">Michael Johnson</h3>
                   <p className="text-gray-600">Teacher</p>
