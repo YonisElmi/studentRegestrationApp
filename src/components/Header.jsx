@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../images/logo2.png'
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -12,7 +13,7 @@ const Header = () => {
     <nav className="fixed top-0 left-0 right-0 bg-white border-gray-200 dark:bg-gray-900 h-16 lg:h-20 z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="../assets/logo2.png" className="h-12" alt="Logo" />
+          <img src={logo} className="h-12" alt="Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Student Register</span>
         </Link>
         <button
