@@ -21,52 +21,7 @@ npm run dev
 The application should now be running at http://localhost:5173.
 Usage
 After starting the development server, you can interact with the application through your web browser. The application provides a user-friendly interface for managing student registrations.
-Project Structure
-The project's folder structure is organized as follows:
-studentRegisteration/
-├── public/
-│   └── (static files such as favicon, manifest, etc.)
-├── src/
-│   ├── components/
-│   │   ├── Footer.jsx
-│   │   ├── Header.jsx
-│   │   ├── StudentDetails.jsx
-│   │   ├── StudentForm.jsx
-│   │   ├── StudentList.jsx
-│   ├── contexts/
-│   │   └── StudentContext.jsx
-│   ├── images/
-│   │   ├── about.jpeg
-│   │   ├── home.jpeg
-│   │   ├── logo.png
-│   │   ├── logo2.png
-│   │   ├── R.jpeg
-│   │   ├── Register.png
-│   │   ├── Register2.png
-│   │   ├── user1.jpeg
-│   │   ├── user2.jpeg
-│   │   ├── user3.jpeg
-│   ├── pages/
-│   │   ├── About.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Home.jsx
-│   │   ├── Register.jsx
-│   │   └── ViewStudents.jsx
-│   ├── App.jsx
-│   ├── index.css
-│   ├── index.jsx
-│   ├── main.jsx
-├── .eslintrc.cjs
-├── .gitignore
-├── index.html
-├── package.json
-├── package-lock.json
-├── postcss.config.js
-├── README.md
-├── tailwind.config.js
-├── vercel.json
-├── vite.config.js
-Description of Key Files and Directories
+Project Structure and their Description of Key Files and Directories
 •	public/: Contains public files that are served directly without processing.
 o	Static files like favicon, manifest, etc., are stored here.
 •	src/: Contains the source code of the application.
