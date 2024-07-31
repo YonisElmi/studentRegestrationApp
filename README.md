@@ -1,6 +1,8 @@
+Introduction
 Student Registration
 The project is a student management application built using React.js. It allows users to register new students, view existing students, and update student and delete students also search students .
 Table of Contents
+
 •	Installation
 •	Usage
 •	Project Structure
