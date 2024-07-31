@@ -19,8 +19,7 @@ The project is a student management application built using React.js. It allows 
 - **Register:** A user-friendly form for new users to register.
 - **Student View**: Displays a list of all registered students with options to view, edit, or delete details.
 - **Contact**: A contact form for users to reach out with inquiries or feedback .
-- **Header:** The header component with navigation links.
- - **Responsive Design:** The application is designed to be responsive and user-friendly across various devices.
+
 
 
 # Installation
