@@ -13,15 +13,19 @@ Table of Contents
 Installation
 To get started with the project, follow these steps:
 1.	Clone the repository:
-https://github.com/YonisElmi/studentRegestrationApp
-2.	Navigate to the project directory:
+
+ https://github.com/YonisElmi/studentRegestrationApp
+3.	Navigate to the project directory:
 cd student-registration
-3.	Install the dependencies:
+
+4.	Install the dependencies:
 npm install
-4.	Start the development server:
+5.	Start the development server:
 npm run dev
 The application should now be running at http://localhost:5173.
+
 Usage
+
 After starting the development server, you can interact with the application through your web browser. The application provides a user-friendly interface for managing student registrations.
 Project Structure and their Description of Key Files and Directories
 •	public/: Contains public files that are served directly without processing.
@@ -57,6 +61,7 @@ o	main.jsx: Another entry point for rendering the App component.
 •	tailwind.config.js: Configuration file for Tailwind CSS.
 •	vercel.json: Configuration file for Vercel deployment.
 •	vite.config.js: Configuration file for Vite.
+
 Features
 •	Home: The landing page welcoming users and providing navigation.
 •	About: Provides information about the application and its purpose.
@@ -71,8 +76,9 @@ Technologies Used
 •	Vite: A build tool that provides a faster and leaner development experience for modern web projects.
 Contributing
 Contributions are welcome! If you would like to contribute to this project, please fork the repository and submit a pull request.
+
 Deployment
-url: student-regestration-app.vercel.app
+url: https://student-regestration-app.vercel.app/
 To deploy this project to Vercel, follow these steps:
 1.	Create a Vercel account at vercel.com.
 2.	Install the Vercel CLI globally:
@@ -85,4 +91,3 @@ cd studentRegisteration
 vercel
 5.	Follow the prompts to complete the deployment setup.
 Your application should now be deployed and accessible via the Vercel URL provided.
-Vercel url: student-regestration-app.vercel.app
