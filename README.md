@@ -72,6 +72,7 @@ Technologies Used
 Contributing
 Contributions are welcome! If you would like to contribute to this project, please fork the repository and submit a pull request.
 Deployment
+url: student-regestration-app.vercel.app
 To deploy this project to Vercel, follow these steps:
 1.	Create a Vercel account at vercel.com.
 2.	Install the Vercel CLI globally:
